@@ -8,13 +8,16 @@ Harvesting amaranth seeds is not difficult, but it was time consuming (1.5 hrs) 
 Once this is done, the mixture is sifted through a fine filter. We won't be biasing our results for seeds that go through this filter because > 95% of the seeds can pass through this filter. Although this step is shorter, it is the step where seeds can get lost and scattered if you're being impatient. The result is a mixture of seeds plus impurities from the flower petals. Since the flower petals are much lighter (and purplier) than the seeds, we purify the seeds by collecting them into a bowl, and gently blow on the seeds while one hand is cupped under the bowl and makes a swirling motion (as if mixing a very, very large glass of wine). To improve the confetti-like experience, wearing sunglasses in this step will protect the eyes from scattering petals and enhance the confusion factor to strangers passing by. Successful execution of these steps will result in very pure, high yield of amaranth seeds.
 
 # Seed Measurement
-Amaranth seeds are ellipsoids, but it would be too time-consuming to measure width and height. 
+To estimate the approximately [spheroid](https://en.wikipedia.org/wiki/Spheroid) shape of amaranth seeds, the height and width must be experimentally determined. However, it would be too time-consuming to measure both axes because they are too small to physically rotate, manipulate, and measure, manually. To approximate seed volume, the height axis will be measured, and the width will be 1.5-fold greater than the height. Seeds were randomly selected out of a bag, measured, and then placed back 20 times. 
 
 # Average Size of Amaranth Seeds I - Physical Properties
-
+  The
+  
 # Average Size of Amaranth Seeds II - Seed Production
 
 # Yield Calculations
+  Assuming starting biomass of 150g, we get Vcontainer / Vseed = n_seeds.
+
 
 # Bonus: Exploring Principal Component Analysis
 
@@ -22,3 +25,4 @@ Here we compare the size of amaranth seeds compared to other object like an appl
 Imagine separating the objects on a one-dimensional line by width only. Amaranth seeds would lie to the lower end, the apple, orange, and rock lies in the middle, and cantaloupe and watermelon on the higher end. Plotting by width *and* mass would separate the apple, orange, and rock, since the rock is heavier than the fruits. 
 
 # Conclusions
+Amaranth seeds are indeed tiny with 
