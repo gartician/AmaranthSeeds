@@ -4,25 +4,36 @@ Amaranth (莧菜) is a South American crop originally planted by the Aztecs, and
 
 # Method: Harvesting the Seeds
 
-Harvesting amaranth seeds is not difficult, but it was time consuming (1.5 hrs) because we are looking to maximize yield. I isolated about 120 grams of the flowering structure from the plant, collect everything into a bag or a box, and then pinch + pull the seeds from the branch, then rub intensely with the thumb and other fingers separate the seed from its flower. This process takes the longest time because there are lots of branches and flowers! 
-Once this is done, the mixture is sifted through a fine filter. We won't be biasing our results for seeds that go through this filter because > 95% of the seeds can pass through this filter. Although this step is shorter, it is the step where seeds can get lost and scattered if you're being impatient. The result is a mixture of seeds plus impurities from the flower petals. Since the flower petals are much lighter (and purplier) than the seeds, we purify the seeds by collecting them into a bowl, and gently blow on the seeds while one hand is cupped under the bowl and makes a swirling motion (as if mixing a very, very large glass of wine). To improve the confetti-like experience, wearing sunglasses in this step will protect the eyes from scattering petals and enhance the confusion factor to strangers passing by. Successful execution of these steps will result in very pure, high yield of amaranth seeds.
+Harvesting amaranth seeds is not difficult, but it was time consuming (1.5 hrs) because I am looking to maximize yield. I isolated about 120 grams of the flowering structure from the plant, collect everything into a bag or a box, and then pinch + pull the seeds from the branch, then rub intensely with the thumb and other fingers separate the seed from its flower. This process takes the longest time because there are lots of branches and flowers! 
+Once this is done, the mixture is sifted through a fine filter. The results won't be biased for seeds that go through this filter because > 95% of the seeds can pass through this filter. Although this step is shorter, it is the step where seeds can get lost and scattered if you're being impatient. The result is a mixture of seeds plus impurities from the flower petals. Since the flower petals are much lighter (and purplier) than the seeds, I purify the seeds by collecting them into a bowl, and gently blow on the seeds while one hand is cupped under the bowl and makes a swirling motion (as if mixing a very, very large bowl of beans). To improve the confetti-like experience, wearing sunglasses in this step will protect the eyes from scattering petals and enhance the confusion factor to strangers passing by. Successful execution of these steps will result in high yield of pure amaranth seeds.
 
 # Method: Seed Measurement
-To estimate the approximately [spheroid](https://en.wikipedia.org/wiki/Spheroid) shape of amaranth seeds, the height and width must be experimentally determined. However, it would be too time-consuming to measure both axes because they are too small to physically rotate, manipulate, and measure, manually. To approximate seed volume, the height axis will be measured, and the width will be 1.5-fold times the height. Seeds were randomly selected out of a bag, measured, and then placed back, to yield 20 observations. To get a better estimation of the average size and standard deviation of amaranth seeds in this year's crop (aka the population, we will bootstrap the sample (n = 20, 10K iterations), take the average and stdev per bootstrap sample, and calculate / visualize mean and sd of amaranth seeds.
+To estimate the approximately [spheroid](https://en.wikipedia.org/wiki/Spheroid) shape of amaranth seeds, the height and width must be experimentally determined. However, it would be too time-consuming to measure both axes because they are too small to physically rotate, manipulate, and measure, manually. To approximate seed volume, the height axis will be measured, and the width will be 1.5-fold times the height. Seeds were randomly selected out of a bag, measured, and then placed back, to yield 20 observations. To get a better estimation of the average size and standard deviation of amaranth seeds in this year's crop (aka the population, I will bootstrap the sample (sample_size = 14, 100K iterations), take the average and stdev per bootstrap sample, and calculate / visualize mean and sd of seed size parameters.
 
-# Results: Average Size of Amaranth Seeds I - Physical Properties
+# Results: Volume of amaranth seeds
+  After random sampling of the original data 100K times with sample_size of 14 and taking each iteration's mean and sd, we arrive to the following statistics: 
   
-# Results: Average Size of Amaranth Seeds II - Seed Production
-n_g seeds / 4 plants = rate of m_g seeds / plant.
-
-# Results: Yield Calculations
-  Assuming 150g of amaranth branches were collected, we get Vcontainer / Vseed = n_seeds.
-  n_g seeds / 150g biomass = rate of m_g seeds / g biomass.
+  * bootstrapped mean seed height = 0.74 mm
+  * bootstrapped mean seed width = 1.09 mm
+  * bootstrapped sd of mean seed height = 0.01 mm
+  * bootstrapped sd of mean seed width = 0.01 mm
   
-# Bonus: Exploring Principal Component Analysis
+To calculate the volume of an amaranth seed, I use the formula of an [oblate spheroid](https://en.wikipedia.org/wiki/Spheroid) to yield a volume of 0.46 mm<sup>3</sup>. Now that is tiny!
+  
+# Results: Yield calculations
+Here are quick back-of-the-envelope calculations to see the yield of amaranth plants per season. Assuming I isolated 20 g of seed from 100 g of amaranth biomass (seeds + branches) from 12 plants, that is 1.67 grams of seeds per plant or 0.2 grams of seeds per gram of plant biomass.
 
-Here we compare the size of amaranth seeds compared to other object like an apple, an orange, a rock, a cantaloupe, and a watermelon. Since we have a large volume of multi-dimensional data (100k rows x width, height, volume, and mass columns), we would like to capture all the variables but visualize (or visually summarize) them in lower-dimensional space that we can see. One way is to use principal component analysis.
-Imagine separating the objects on a one-dimensional line by width only. Amaranth seeds would lie to the lower end, the apple, orange, and rock lies in the middle, and cantaloupe and watermelon on the higher end. Plotting by width *and* mass would separate the apple, orange, and rock, since the rock is heavier than the fruits. 
+For summer 2019, I harvested enough seeds to fill a snack sized ziploc bag (16.5 cm x 8.2 cm x about 2 cm depth) - that’s about 5.81x10<sup>5</sup> number of seeds. If I 
+were to sow the seeds I harvested in one season 1 feet apart, this ficticious plantation would have 762 rows and columns (I don’t recommend pulling this off, but do it in Missouri if you must). To put that into perspective, that’s like clearing 3 oblong city blocks (260 m x 89 m) or 9 normal city blocks (81 m x 81 m) and that's from just 12 plants!
 
 # Conclusions
-Amaranth seeds are indeed tiny!
+The amaranth plant is a hardy and proliferative crop whose seeds are tiny and numerous. In this project, the physical aspects of the amaranth seed was quantitatively described; the average height is 0.74 mm, width is 1.09 mm, sd of 0.01 mm for both height and width, and volume of 0.46 mm<sup>3</sup>. 
+
+Make sure to check out this [link]() to see some photos associated with this project! 
+
+# Addendum: amaranth math
+
+The volume of a mol of amaranth seeds (2.7692x10<sup>23</sup> mm<sup>3</sup>) is enough to:
+  * smother and fill the Stowers research institute 1.08 million times assuming [600K sq.ft](https://www.stowers.org/about/campus) workspace and 15 ft ceilings.
+  * cover the [entire volume of the Great Lakes](https://en.wikipedia.org/wiki/Great_Lakes) 12 times over
+  * pack the Pacific Ocean at 0.04% capacity
